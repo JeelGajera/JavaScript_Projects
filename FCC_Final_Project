@@ -1,0 +1,18 @@
+P-1
+
+function palindrome(str) {
+  let boom = str;
+  const forwardStr = str.match(/[0-9a-zA-Z]/g);
+    var newString = "";
+  for (var i = boom.length - 1; i >= 0; i--) { 
+        newString += boom[i]; 
+    }
+    const backwardStr = newString.match(/[0-9a-zA-Z]/g)
+  
+  if(forwardStr == null ) {
+    return true;
+  }
+  return forwardStr.join("").toLowerCase() == backwardStr.join("").toLowerCase();
+}
+
+palindrome("1 eye for of 1 eye.");
